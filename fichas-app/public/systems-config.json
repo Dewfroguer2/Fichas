@@ -1,0 +1,76 @@
+{
+  "systems": [
+    {
+      "id": "dnd5e",
+      "name": "D&D 5ª Edição",
+      "description": "Dungeons & Dragons 5ª Edição",
+      "attributes": {
+        "base": ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"],
+        "custom": ["armor_class", "hit_points", "speed", "proficiency_bonus"]
+      },
+      "pdfMapping": {
+        "patterns": [
+          { "regex": "(?:STR|Força|Strength)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "strength", "type": "modifier_or_value" },
+          { "regex": "(?:DEX|Destreza|Dexterity)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "dexterity", "type": "modifier_or_value" },
+          { "regex": "(?:CON|Constituição|Constitution)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "constitution", "type": "modifier_or_value" },
+          { "regex": "(?:INT|Inteligência|Intelligence)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "intelligence", "type": "modifier_or_value" },
+          { "regex": "(?:WIS|Sabedoria|Wisdom)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "wisdom", "type": "modifier_or_value" },
+          { "regex": "(?:CHA|Carisma|Charisma)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "charisma", "type": "modifier_or_value" },
+          { "regex": "(?:AC|Class[e]?\\s*Armadura|Armor\\s*Class)\\s*(?:\\(\\s*)?([\\d]+)", "field": "armor_class", "type": "number" },
+          { "regex": "(?:PV|Pontos?\\s*de\\s*Vida|HP|Hit\\s*Points?)\\s*(?:\\(\\s*)?([\\d]+)", "field": "hit_points", "type": "number" }
+        ],
+        "keywords": {
+          "strength": ["STR", "Força", "Strength"],
+          "dexterity": ["DEX", "Destreza", "Dexterity"],
+          "constitution": ["CON", "Constituição", "Constitution"],
+          "intelligence": ["INT", "Inteligência", "Intelligence"],
+          "wisdom": ["WIS", "Sabedoria", "Wisdom"],
+          "charisma": ["CHA", "Carisma", "Charisma"],
+          "armor_class": ["AC", "Classe de Armadura", "Armor Class"],
+          "hit_points": ["PV", "Pontos de Vida", "HP"]
+        }
+      }
+    },
+    {
+      "id": "pathfinder",
+      "name": "Pathfinder 1ª Edição",
+      "description": "Pathfinder RPG 1ª Edição",
+      "attributes": {
+        "base": ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"],
+        "custom": ["armor_class", "hit_points", "base_attack_bonus", "initiative"]
+      },
+      "pdfMapping": {
+        "patterns": [
+          { "regex": "(?:STR|Força|Strength)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "strength", "type": "modifier_or_value" },
+          { "regex": "(?:DEX|Destreza|Dexterity)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "dexterity", "type": "modifier_or_value" },
+          { "regex": "(?:CON|Constituição|Constitution)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "constitution", "type": "modifier_or_value" },
+          { "regex": "(?:INT|Inteligência|Intelligence)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "intelligence", "type": "modifier_or_value" },
+          { "regex": "(?:WIS|Sabedoria|Wisdom)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "wisdom", "type": "modifier_or_value" },
+          { "regex": "(?:CHA|Carisma|Charisma)\\s*(?:\\(\\s*([+-]?\\d+)\\s*\\))?\\s*([+-]?\\d+)?", "field": "charisma", "type": "modifier_or_value" },
+          { "regex": "(?:BAB|Base\\s*Attack\\s*Bonus|Bonus\\s*de\\s*Ataque\\s*Base)\\s*(?:\\(\\s*)?([+-]?\\d+)", "field": "base_attack_bonus", "type": "number" }
+        ],
+        "keywords": {
+          "strength": ["STR", "Força", "Strength"],
+          "dexterity": ["DEX", "Destreza", "Dexterity"],
+          "constitution": ["CON", "Constituição", "Constitution"],
+          "intelligence": ["INT", "Inteligência", "Intelligence"],
+          "wisdom": ["WIS", "Sabedoria", "Wisdom"],
+          "charisma": ["CHA", "Carisma", "Charisma"]
+        }
+      }
+    },
+    {
+      "id": "generic",
+      "name": "Sistema Genérico",
+      "description": "Template genérico customizável",
+      "attributes": {
+        "base": ["attribute_1", "attribute_2", "attribute_3"],
+        "custom": ["custom_1", "custom_2"]
+      },
+      "pdfMapping": {
+        "patterns": [],
+        "keywords": {}
+      }
+    }
+  ]
+}

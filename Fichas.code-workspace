@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Fichas",
+			"path": "."
+		},
+		{
+			"name": "fichas-app",
+			"path": "../fichas-app"
+		}
+	],
+	"settings": {}
+}
